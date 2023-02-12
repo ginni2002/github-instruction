@@ -1,0 +1,83 @@
+#Install Git and GitBash.
+#Git can be executed in windows terminal, git bash, VsCode Terminal.
+#Use command "git" in terminal for list of git instructions/commands.
+
+**For example following is my project directory structure: 
+
+-Main_Folder/
+ --html
+ --css
+ --images/
+  ---pic1
+  ---pic2
+
+**Now lets upload it in Github's repository using git commands.
+Step-1:   Open your github profile(ginni2002), then create a new repository. For example, name of new repository is "test".
+Step-1.1: After creating new repo(repository), few commands will be displayed.
+Step-2:   Open your current working directory in terminal(any). In above case "Main_Folder" is our working directory.
+Step-3:   Type command "git init", it will create a '.gitignore' file. Which holds record of connections and project info.
+Step-3.1: Now following will be structure of your working project.
+
+-Main_Folder/
+ --html
+ --css
+ --images/
+  ---pic1
+  ---pic2
+ --.gitignore
+
+*Note sometimes this file may not be visible due to hidden properties. Disable it first, then u may able to view it.
+
+Step-4:   Now add files/folder which u want to add, files/folder can be added individually or all together.
+          For individual type command "git add html"(html is an individual file in our project), 
+          and for all together type command "git add ." .
+Step-4.1: After successfully adding all files or selected files, type command "git status" for checking whether 
+          files are added or not.
+Step-4.2: Incase u have added some wrong files/folder, you can reverse the step by typing command "git reset".
+Step-5:   Once all the files are added, commit your process by typing command 'git commit -m "commit name1" '.
+          You can add any commit name, commit is just a record tracker, which stores the data of changes done in project.
+          For example whenever u try to modify your project, and then commit your project, the commit will display your changes
+          in form of bookmarks, that will tell the changes made by you. 
+Step-6:   Now you can add any branch name for your directory, by typing command "git branch -M main" in position of 'main' 
+          you can add any name of branch. This step is completely optional, if u skip this step, default name of your branch will be
+          "master".
+Step-7:   Connect your github repo with the project using command "git remote add origin https://github.com/ginni2002/test.git".
+          *Note: This command is only used once, later on after modifying and commiting your project, no need to reconnect your github 
+          repo with current project.
+Step-8:   Finally its time for pushing your project in github, use command "git push -u origin master", in case of master you can use
+          your branch name, master is just a default name of your project branch.
+
+So what were the steps-> Add, commit, push and repeat.
+**Done your project is uploaded in github** :)
+
+#Now incase you have to modify your project, then no need to reupload all your project, just upload the changes which is being made.
+#How to do so? Dont worry let me show you:->
+
+This was your project structure earlier: 
+
+-Main_Folder/
+ --html
+ --css
+ --images/
+  ---pic1
+  ---pic2
+ --.gitignore
+
+**Now I have to delete "images" folder from my github repo which contains "pic1", "pic2".
+And then update my changes in existing github repo.
+
+Step1:   Open your current working directory in any terminal.
+         *Note: This project should already be existing in github repo, or an ".gitignore" file should be present.
+         Which means you should had already created an github repo for this project, therefore no need to connect(git remote)
+         and create universal elements(git -u) for this project.
+Step2:   For deleting "images" folder there are two conditions: 
+         Either delete "images" folder from github repo as well as your system memory, then type command "git rm -r images/".
+         Or delete "images" folder only from github repo, then type command "git rm -r --cached images/".
+Step3:   Commit your changes by typing command 'git commit -m "commit name2" ' .
+Step4:   Then push your changes in repo, by using command "git push origin master".
+         *Note: Previously we have already connected to our github repo, so no need to reconnect again.
+
+#Done your changes have been made in github repo without affecting in system memory. 
+         
+
+
